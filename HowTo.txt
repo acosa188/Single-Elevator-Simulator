@@ -1,0 +1,53 @@
+How to compile:
+
+    javac Elevator.java
+
+How to run:
+
+    java Elevator <scheduling algorithm> <Idle policy>
+
+Sample runs:
+
+    java Elevator linear stay
+
+    java Elevator linear bottom
+
+    java Elevator fcfs stay
+
+    java Elevator fcfs bottom
+
+Debuging tools:
+    Inside the main there are four debuging tools:
+
+    debug  ------- when true, it lets the user see who's inside the elevator
+
+    debug1 ------- when true, lets the user see the general queue(or who's waiting on each floor)
+
+    debug2 ------- when true, lets the user see the stats for average response time for both up and down
+
+Helpful tips on debugging:
+    set
+        debug  = true;              
+        debug1 = true;
+        debug2 = false;
+    Debugging for current_time, knowing who's in the elevator, updating the general queue, and if the response time is generated correctly.
+
+    set
+        debug   = false;
+        debug1  = false;
+        debug2  = true;
+
+    if the user only wants to see the average response times.
+
+Important things to know about this program.
+    This program
+    - queues every arrivals times in floor 0 immediately. (user can change the arrival numbers by changing the global named NUM_ARR)
+    - get same number of arrivals and departures (except for FCFS, I had bugs for duplications on departure? which I just throw it out because I didn't know how to fix it and so that it won't affect the stats).
+    - generates departure after an arrival is serviced and puts it on the queue
+    - relies heavily on updating its current time(simulated clock)
+    - only service people below its current time.
+    - only runs on a single elevator.
+    
+
+Note: There are some variables there that I didn't end up using, so just ignore it.
+    
