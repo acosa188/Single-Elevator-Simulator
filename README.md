@@ -34,7 +34,7 @@ Inside the main there are four debuging tools:
 -  debug1 ------- when true, lets the user see the general queue(or who's waiting on each floor)
 -  debug2 ------- when true, lets the user see the stats for average response time for both up and down
 
-##Helpful tips on debugging
+## Helpful tips on debugging
 
 ```
 set
